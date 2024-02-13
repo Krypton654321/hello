@@ -42,7 +42,7 @@ const io = socket(server, {
   cors: {
     origin: [
       "http://localhost:3000",
-      "https://mern-chat-app-zh9y.onrender.com",
+      "https://mern-chat-app-npsg.onrender.com",
     ],
     credentials: true,
   },
