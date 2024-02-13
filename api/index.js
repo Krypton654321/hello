@@ -13,10 +13,10 @@ app.use(cors());
 app.use(express.json());
 
 const namee = path.resolve();
-app.use(express.static(path.join(namee, "/client/build")));
+app.use(express.static(path.join(namee, "/client/dist")));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(namee, "client", "build", "index.html"));
+  res.sendFile(path.join(namee, "client", "dist", "index.html"));
 });
 
 app.use("/api/auth", userRoutes);
