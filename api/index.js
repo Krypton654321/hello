@@ -12,11 +12,11 @@ require("dotenv").config();
 app.use(cors());
 app.use(express.json());
 
-const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, "/client/dist")));
+const namee = path.resolve();
+app.use(express.static(path.join(namee, "/client/dist")));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+  res.sendFile(path.join(namee, "client", "dist", "index.html"));
 });
 
 app.use("/api/auth", userRoutes);
